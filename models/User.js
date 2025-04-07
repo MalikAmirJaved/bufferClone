@@ -1,8 +1,13 @@
-import mongoose, { Schema } from 'mongoose'
+import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
-    facebookAccessToken,
-    facebookPageId,
+const facebookUserSchema = new mongoose.Schema({
+  facebookAccessToken: String,
+  facebookPageId: String,
+  facebookName: String,
+  facebookEmail: String,
+  pageAccessToken: String,
+  pageId: String,
+  pageName: String,
 });
 
-export const user = mongoose.model('user', userSchema);
+export const user = mongoose.model("FacebookUser", facebookUserSchema);
